@@ -34,7 +34,7 @@ form.addEventListener("submit", (e) => {
         // focus element
         fullName.focus();
       } else if (fullNameValue.length < 3 || fullNameValue.length > 50) {
-        setErrorMessage(fullName, "This field minimum character is 5 and maximum character is 50. Please input at this range.");
+        setErrorMessage(fullName, "This field minimum character is 3 and maximum character is 50. Please input at this range.");
     
         // focus element
         fullName.focus();
@@ -70,7 +70,7 @@ form.addEventListener("submit", (e) => {
         // focus element
         phoneNumber.focus();
       } else if (phoneNumberValue.length < 10) {
-        setErrorMessage(phoneNumber, "This field minimum maximum character is 11. Please input at this range.");
+        setErrorMessage(phoneNumber, "This field minimum maximum character is 10. Please input at this range.");
     
         // focus element
         phoneNumber.focus();
@@ -105,8 +105,8 @@ if (passwordValue === "") {
 
     // focus element
     password.focus();
-  } else if (passwordValue.length < 6 || passwordValue.length > 20) {
-    setErrorMessage(password, "This field minimum character is 6 and maximum character is 20. Please input at this range.");
+  } else if (passwordValue.length < 8 || passwordValue.length > 20) {
+    setErrorMessage(password, "This field minimum character is 8 and maximum character is 20. Please input at this range.");
 
     // focus element
     password.focus();
@@ -123,8 +123,8 @@ if (passwordValue === "") {
 
     // focus element
     checkPassword.focus();
-  } else if (checkPasswordValue.length < 6 || checkPasswordValue.length > 20) {
-    setErrorMessage(checkPassword, "This field minimum character is 6 and maximum character is 20. Please input at this range.");
+  } else if (checkPasswordValue.length < 8 || checkPasswordValue.length > 20) {
+    setErrorMessage(checkPassword, "This field minimum character is 8 and maximum character is 20. Please input at this range.");
 
     // focus element
     checkPassword.focus();
@@ -161,18 +161,18 @@ function setErrorMessage(input, message) {
   }
   
   // !proper username validation check
-  function isUserNameValid(username) {
-    /* 
-      Usernames can only have: 
-      - Lowercase Letters (a-z) 
-      - Numbers (0-9)
-      - Dots (.)
-      - Underscores (_)
-    */
-    const res = /^[a-z0-9_\.]+$/.exec(username);
-    const valid = !!res;
-    return valid;
-  }
+  // function isUserNameValid(username) {
+  //   /* 
+  //     Usernames can only have: 
+  //     - Lowercase Letters (a-z) 
+  //     - Numbers (0-9)
+  //     - Dots (.)
+  //     - Underscores (_)
+  //   */
+  //   const res = /^[a-z0-9_\.]+$/.exec(username);
+  //   const valid = !!res;
+  //   return valid;
+  // }
   
   // !proper email validation check
   function isValidateEmail(email) {
